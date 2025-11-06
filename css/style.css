@@ -1,0 +1,236 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  max-width: 320px;
+  margin: 0px auto;
+  font-family: "Playfair Display";
+}
+
+.hero {
+  height: 1210px;
+  padding: 0px 16px;
+  background: top/cover no-repeat url(../img/background/hero_section_320px.png), rgba(0, 0, 0, 0.3);
+}
+.hero .hero_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 16px;
+  margin-bottom: 100px;
+}
+.hero .hero_title {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 100px;
+}
+.hero .hero_title h1 {
+  font-size: 40px;
+  line-height: 53px;
+}
+.hero .hero_title p {
+  font-family: Rubik;
+  font-size: 18px;
+  line-height: 21px;
+}
+.hero .hero_content {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 16px;
+  gap: 60px;
+}
+.hero .hero_content .hero_content_form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 40px;
+}
+.hero .hero_content .hero_content_form .hero_content_form_container {
+  border-bottom: 1px solid black;
+  height: 58px;
+  display: grid;
+}
+.hero .hero_content .hero_content_form .hero_content_form_container label {
+  display: block;
+  font-family: Rubik;
+  font-size: 14px;
+  color: #767E86;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+.hero .hero_content .hero_content_form .hero_content_form_container input,
+.hero .hero_content .hero_content_form .hero_content_form_container select,
+.hero .hero_content .hero_content_form .hero_content_form_container option {
+  font-size: 14px;
+  line-height: 19px;
+  background-color: transparent;
+}
+.hero button {
+  height: 128px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  background-color: #FF7757;
+  font-size: 36px;
+  color: white;
+  padding: 40px 20px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+.hero button::after {
+  content: url("../img/icons/arrow_white.png");
+  line-height: 36px;
+}
+
+.destinations {
+  padding: 80px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.destinations .destinations_header {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.destinations .destinations_header .destinations_header__title {
+  font-size: 40px;
+  line-height: 53px;
+  color: #172432;
+  position: relative;
+  padding-bottom: 20px;
+}
+.destinations .destinations_header .destinations_header__title::after {
+  content: "";
+  height: 2px;
+  width: 227px;
+  background-color: #FF7757;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.destinations .destinations_header .destinations_header__text {
+  font-family: Rubik;
+  font-size: 18px;
+  color: #767E86;
+}
+.destinations .destinations_content {
+  background-image: url(../img/photo/berlin_mobile.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 320px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.destinations .destinations_content .destinations_content__title {
+  font-size: 24px;
+  font-weight: medium;
+  color: #fff;
+  margin-bottom: 17px;
+}
+.destinations .destinations_content .destinations_content__location {
+  font-family: Rubik;
+  font-size: 18px;
+  color: #fff;
+  display: flex;
+  gap: 16px;
+  align-items: end;
+}
+.destinations .destinations_content .destinations_content__location::before {
+  content: url("../img/icons/location.png");
+  width: 24px;
+  height: 24px;
+}
+.destinations .destination_arrows {
+  align-self: center;
+  display: flex;
+  gap: 40px;
+}
+.destinations .destination_arrows .arrow {
+  height: 60px;
+  width: 66px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.destinations .destination_arrows .destination_arrows__left {
+  background-color: #172432;
+}
+.destinations .destination_arrows .destination_arrows__right {
+  background-color: #FF7757;
+}
