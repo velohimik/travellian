@@ -15,25 +15,25 @@
 <body>
     <div class="container">
         <section class="hero">
-            <header class="hero_header">
-                <div class="hero_header__logo">
+            <header class="hero__header">
+                <div class="hero__logo">
                     <img src="./img/icons/logo.png" alt="Travellian">
                 </div>
-                <div class="hero_header__menu">
+                <div class="hero__menu">
                     <img src="./img/icons/hamburger1.png" alt="menu">
                 </div>
             </header>
-            <div class="hero_title">
+            <div class="hero__title">
                 <h1>Start your unforgettable journey with us.</h1>
                 <p>The best travel for your jouney begins now</p>
             </div>
-            <article class="hero_content">
-                <form action="#" class="hero_content_form">
-                    <div class="hero_content_form_container">
+            <article class="hero__content">
+                <form action="#" class="hero__form">
+                    <div class="form-container">
                         <label for="destination">Destination</label>
                         <input type="text" value="Dubai" id="destination">
                     </div>
-                    <div class="hero_content_form_container">
+                    <div class="form-container">
                         <label for="person">Person</label>
                         <select name="person" id="person">
                             <option value="1">1</option>
@@ -43,11 +43,11 @@
                             <option value="5">5</option>
                         </select>
                     </div>
-                    <div class="hero_content_form_container">
+                    <div class="form-container">
                         <label for="check_in">Check in</label>
                         <input type="date" value="2020-09-17" id="check_in">
                     </div>
-                    <div class="hero_content_form_container">
+                    <div class="form-container">
                         <label for="check_out">Check out</label>
                         <input type="date" value="2020-10-17" id="check_out">
                     </div>
@@ -55,21 +55,59 @@
                 <button type="submit">Book Now</button>
             </article>
         </section>
-        <section class="destinations">
-            <div class="destinations_header">
-                <h2 class="destinations_header__title">Popular Destinations</h2>
-                <p class="destinations_header__text">Most popular destinations around the world, from historical places
-                    to natural wonders.</p>
+        <section class="destinations section">
+            <div class="section__header">
+                <h2 class="section__title">Popular Destinations</h2>
+                <p class="section__description">Most popular destinations around the world, from historical places to
+                    natural wonders.</p>
             </div>
-            <article class="destinations_content">
-                <h4 class="destinations_content__title">Monument of Berlin</h4>
-                <p class="destinations_content__location">Berlin, Germany</p>
-            </article>
-            <div class="destination_arrows">
-                <div class="destination_arrows__left arrow">
+            <div class="destinations__content">
+                <h4 class="destinations__showplace">Monument of Berlin</h4>
+                <p class="destinations__location">Berlin, Germany</p>
+            </div>
+            <div class="section__arrows">
+                <div class="section__left-arrow arrow">
                     <img src="./img/icons/vector_left.svg" alt="">
                 </div>
-                <div class="destination_arrows__right arrow">
+                <div class="section__right-arrow arrow">
+                    <img src="./img/icons/vector_right.svg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="offer section">
+            <div class="section__header">
+                <h2 class="section__title">Special Offer</h2>
+                <p class="section__description">Check out our special offer and discounts</p>
+            </div>
+            <div class="offer__content">
+                <div class="offer__image">
+                    <img src="./img/photo/lisbon_mobile.png" alt="">
+                </div>
+                <div class="offer__info">
+                    <div class="offer__place">
+                        <div class="offer__title">Lisbon, Portugal</div>
+                        <div class="offer__stars">
+                            <img src="./img/icons/star.svg" alt="">
+                            <img src="./img/icons/star.svg" alt="">
+                            <img src="./img/icons/star.svg" alt="">
+                            <img src="./img/icons/star.svg" alt="">
+                            <img src="./img/icons/star.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="offer__description">
+                        5 nights and 4 days in 5 star hotel, breakfast and lunch included. Very popular during the renaissance. Passage and going through the cites of the world in classical literature.
+                    </div>
+                    <div class="offer__order">
+                        <div class="offer__price">From <span>&euro;500</span></div>
+                        <button class="offer__btn-details">Details</button>
+                    </div>
+                </div>
+            </div>
+            <div class="section__arrows">
+                <div class="section__left-arrow arrow">
+                    <img src="./img/icons/vector_left.svg" alt="">
+                </div>
+                <div class="section__right-arrow arrow">
                     <img src="./img/icons/vector_right.svg" alt="">
                 </div>
             </div>

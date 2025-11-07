@@ -70,7 +70,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  max-width: 320px;
   margin: 0px auto;
   font-family: "Playfair Display";
 }
@@ -80,14 +79,14 @@ body {
   padding: 0px 16px;
   background: top/cover no-repeat url(../img/background/hero_section_320px.png), rgba(0, 0, 0, 0.3);
 }
-.hero .hero_header {
+.hero .hero__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 24px 16px;
   margin-bottom: 100px;
 }
-.hero .hero_title {
+.hero .hero__title {
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -95,34 +94,34 @@ body {
   gap: 16px;
   margin-bottom: 100px;
 }
-.hero .hero_title h1 {
+.hero .hero__title h1 {
   font-size: 40px;
   line-height: 53px;
 }
-.hero .hero_title p {
+.hero .hero__title p {
   font-family: Rubik;
   font-size: 18px;
   line-height: 21px;
 }
-.hero .hero_content {
+.hero .hero__content {
   display: flex;
   flex-direction: column;
   background-color: #fff;
   border-radius: 16px;
   gap: 60px;
 }
-.hero .hero_content .hero_content_form {
+.hero .hero__content .hero__form {
   display: flex;
   flex-direction: column;
   padding: 20px;
   gap: 40px;
 }
-.hero .hero_content .hero_content_form .hero_content_form_container {
+.hero .hero__content .hero__form .form-container {
   border-bottom: 1px solid black;
   height: 58px;
   display: grid;
 }
-.hero .hero_content .hero_content_form .hero_content_form_container label {
+.hero .hero__content .hero__form .form-container label {
   display: block;
   font-family: Rubik;
   font-size: 14px;
@@ -130,9 +129,9 @@ body {
   line-height: 17px;
   text-transform: uppercase;
 }
-.hero .hero_content .hero_content_form .hero_content_form_container input,
-.hero .hero_content .hero_content_form .hero_content_form_container select,
-.hero .hero_content .hero_content_form .hero_content_form_container option {
+.hero .hero__content .hero__form .form-container input,
+.hero .hero__content .hero__form .form-container select,
+.hero .hero__content .hero__form .form-container option {
   font-size: 14px;
   line-height: 19px;
   background-color: transparent;
@@ -154,25 +153,24 @@ body {
   line-height: 36px;
 }
 
-.destinations {
+.section {
   padding: 80px 16px;
   display: flex;
   flex-direction: column;
-  gap: 100px;
 }
-.destinations .destinations_header {
+.section .section__header {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
-.destinations .destinations_header .destinations_header__title {
+.section .section__header .section__title {
   font-size: 40px;
   line-height: 53px;
   color: #172432;
   position: relative;
   padding-bottom: 20px;
 }
-.destinations .destinations_header .destinations_header__title::after {
+.section .section__header .section__title::after {
   content: "";
   height: 2px;
   width: 227px;
@@ -181,46 +179,17 @@ body {
   bottom: 0;
   left: 0;
 }
-.destinations .destinations_header .destinations_header__text {
+.section .section__header .section__description {
   font-family: Rubik;
   font-size: 18px;
   color: #767E86;
 }
-.destinations .destinations_content {
-  background-image: url(../img/photo/berlin_mobile.png);
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 320px;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-}
-.destinations .destinations_content .destinations_content__title {
-  font-size: 24px;
-  font-weight: medium;
-  color: #fff;
-  margin-bottom: 17px;
-}
-.destinations .destinations_content .destinations_content__location {
-  font-family: Rubik;
-  font-size: 18px;
-  color: #fff;
-  display: flex;
-  gap: 16px;
-  align-items: end;
-}
-.destinations .destinations_content .destinations_content__location::before {
-  content: url("../img/icons/location.png");
-  width: 24px;
-  height: 24px;
-}
-.destinations .destination_arrows {
+.section .section__arrows {
   align-self: center;
   display: flex;
   gap: 40px;
 }
-.destinations .destination_arrows .arrow {
+.section .section__arrows .arrow {
   height: 60px;
   width: 66px;
   border-radius: 12px;
@@ -228,9 +197,111 @@ body {
   justify-content: center;
   align-items: center;
 }
-.destinations .destination_arrows .destination_arrows__left {
+.section .section__arrows .section__left-arrow {
   background-color: #172432;
 }
-.destinations .destination_arrows .destination_arrows__right {
+.section .section__arrows .section__right-arrow {
   background-color: #FF7757;
+}
+
+.destinations {
+  gap: 100px;
+}
+.destinations .destinations__content {
+  align-items: center;
+  background-image: url(../img/photo/berlin_mobile.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 320px;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.destinations .destinations__content .destinations__showplace {
+  font-size: 24px;
+  font-weight: medium;
+  color: #fff;
+  margin-bottom: 17px;
+}
+.destinations .destinations__content .destinations__location {
+  font-family: Rubik;
+  font-size: 18px;
+  color: #fff;
+  display: flex;
+  gap: 16px;
+  align-items: end;
+}
+.destinations .destinations__content .destinations__location::before {
+  content: url("../img/icons/location.png");
+  width: 24px;
+  height: 24px;
+}
+
+.offer {
+  gap: 60px;
+}
+.offer .offer__content {
+  background-color: #FFF8F1;
+  border-radius: 26px;
+}
+.offer .offer__content .offer__info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.offer .offer__content .offer__info .offer__place {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.offer .offer__content .offer__info .offer__place .offer__title {
+  font-family: Mulish;
+  font-size: 28px;
+  line-height: 35px;
+  color: #767E86;
+}
+.offer .offer__content .offer__info .offer__place .offer__stars {
+  display: flex;
+  justify-content: start;
+  gap: 4px;
+}
+.offer .offer__content .offer__info .offer__description {
+  font-family: Rubik;
+  font-size: 16px;
+  line-height: 20px;
+  color: #172432;
+}
+.offer .offer__content .offer__info .offer__order {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.offer .offer__content .offer__info .offer__order .offer__price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: Rubik;
+  font-size: 18px;
+  line-height: 21px;
+  color: #767E86;
+}
+.offer .offer__content .offer__info .offer__order .offer__price span {
+  font-size: 32px;
+  line-height: 38px;
+  color: #FF7757;
+  word-spacing: 0px;
+}
+.offer .offer__content .offer__info .offer__order .offer__btn-details {
+  font-family: Rubik;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 16px 24px;
+  background-color: #FF7654;
+  border-radius: 12px;
+  width: 130px;
 }
