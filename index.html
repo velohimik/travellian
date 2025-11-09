@@ -19,9 +19,9 @@
                 <div class="hero__logo">
                     <img src="./img/icons/logo.png" alt="Travellian">
                 </div>
-                <div class="hero__menu">
+                <button class="hero__menu">
                     <img src="./img/icons/hamburger1.png" alt="menu">
-                </div>
+                </button>
             </header>
             <div class="hero__title">
                 <h1>Start your unforgettable journey with us.</h1>
@@ -29,30 +29,32 @@
             </div>
             <article class="hero__content">
                 <form action="#" class="hero__form">
-                    <div class="form-container">
-                        <label for="destination">Destination</label>
-                        <input type="text" value="Dubai" id="destination">
+                    <div class="hero__inputs">
+                        <div class="hero__input">
+                            <label for="destination">Destination</label>
+                            <input type="text" value="Dubai" id="destination">
+                        </div>
+                        <div class="hero__input">
+                            <label for="person">Person</label>
+                            <select name="person" id="person">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <div class="hero__input">
+                            <label for="check_in">Check in</label>
+                            <input type="date" value="2020-09-17" id="check_in">
+                        </div>
+                        <div class="hero__input">
+                            <label for="check_out">Check out</label>
+                            <input type="date" value="2020-10-17" id="check_out">
+                        </div>
                     </div>
-                    <div class="form-container">
-                        <label for="person">Person</label>
-                        <select name="person" id="person">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
-                    <div class="form-container">
-                        <label for="check_in">Check in</label>
-                        <input type="date" value="2020-09-17" id="check_in">
-                    </div>
-                    <div class="form-container">
-                        <label for="check_out">Check out</label>
-                        <input type="date" value="2020-10-17" id="check_out">
-                    </div>
+                    <button class="hero__submit" type="submit">Book Now</button>
                 </form>
-                <button type="submit">Book Now</button>
             </article>
         </section>
         <section class="destinations section">
@@ -109,6 +111,22 @@
                 </div>
                 <div class="section__right-arrow arrow">
                     <img src="./img/icons/vector_right.svg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="blog section">
+            <div class="section__header">
+                <h2 class="section__title">Our Blog</h2>
+                <p class="section__description">An insight the incredible experience in the world</p>
+            </div>
+            <div class="blog__content">
+                <div class="blog__image">
+                    <img src="./img/photo/italy_mobile.png" alt="">
+                </div>
+                <div class="blog__article">
+                    <div class="blog__title">Beautiful Italy Let’s travel</div>
+                    <div class="blog__text">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system and expound the actual teachings of the great explorer of the truth, the master- builder of human happiness. No one rejects, dislike, or avoids plasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremly painful. Nor again is there anyone who loves or pursues.</div>
+                    <div class="blog__link">Read More</div>
                 </div>
             </div>
         </section>

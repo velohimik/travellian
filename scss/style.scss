@@ -1,5 +1,10 @@
 @use "_default_style";
 
+$white_color: #FFF;
+$black_color: #172432;
+$red_color: #FF7757;
+$grey_color: #767E86;
+
 body {
     // max-width: 320px;
     margin: 0px auto;
@@ -19,10 +24,16 @@ body {
         align-items: center;
         padding: 24px 16px;
         margin-bottom: 100px;
+
+        .hero__menu {
+            background-color: transparent;
+            height: 60px;
+            width: 60px;
+        }
     }
 
     .hero__title {
-        color: #fff;
+        color: $white_color;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -44,17 +55,18 @@ body {
     .hero__content {
         display: flex;
         flex-direction: column;
-        background-color: #fff;
+        background-color: $white_color;
         border-radius: 16px;
         gap: 60px;
 
-        .hero__form {
+        .hero__inputs {
             display: flex;
             flex-direction: column;
             padding: 20px;
             gap: 40px;
+            margin-bottom: 60px;
 
-            .form-container {
+            .hero__input {
                 border-bottom: 1px solid black;
                 height: 58px;
                 display: grid;
@@ -63,7 +75,7 @@ body {
                     display: block;
                     font-family: Rubik;
                     font-size: 14px;
-                    color: #767E86;
+                    color: $grey_color;
                     line-height: 17px;
                     text-transform: uppercase;
                 }
@@ -79,11 +91,12 @@ body {
         }
     }
 
-    button {
+    .hero__submit {
         height: 128px;
+        width: 100%;
         border-bottom-left-radius: 16px;
         border-bottom-right-radius: 16px;
-        background-color: #FF7757;
+        background-color: $red_color;
         font-size: 36px;
         color: white;
         padding: 40px 20px;
@@ -109,17 +122,18 @@ body {
         gap: 32px;
 
         .section__title {
+            display: inline-flex;
             font-size: 40px;
             line-height: 53px;
-            color: #172432;
+            color: $black_color;
             position: relative;
             padding-bottom: 20px;
 
             &::after {
                 content: "";
                 height: 2px;
-                width: 227px;
-                background-color: #FF7757;
+                width: 100%;
+                background-color: $red_color;
                 position: absolute;
                 bottom: 0;
                 left: 0;
@@ -129,7 +143,7 @@ body {
         .section__description {
             font-family: Rubik;
             font-size: 18px;
-            color: #767E86;
+            color: $grey_color;
         }
     }
 
@@ -148,11 +162,11 @@ body {
         }
 
         .section__left-arrow {
-            background-color: #172432;
+            background-color: $black_color;
         }
 
         .section__right-arrow {
-            background-color: #FF7757;
+            background-color: $red_color;
         }
     }
 }
@@ -161,28 +175,29 @@ body {
     gap: 100px;
 
     .destinations__content {
-        align-items: center;
+        align-self: center;
         background-image: url(../img/photo/berlin_mobile.png);
         background-repeat: no-repeat;
         background-position: center;
-        width: 100%;
+        max-width: 288px;
         height: 320px;
         padding: 40px 20px;
         display: flex;
         flex-direction: column;
         justify-content: end;
+        border-radius: 16px;
 
         .destinations__showplace {
             font-size: 24px;
             font-weight: medium;
-            color: #fff;
+            color: $white_color;
             margin-bottom: 17px;
         }
 
         .destinations__location {
             font-family: Rubik;
             font-size: 18px;
-            color: #fff;
+            color: $white_color;
             display: flex;
             gap: 16px;
             align-items: end;
@@ -198,7 +213,7 @@ body {
 
 .offer {
     gap: 60px;
-    
+
     .offer__content {
         background-color: #FFF8F1;
         border-radius: 26px;
@@ -218,7 +233,7 @@ body {
                     font-family: Mulish;
                     font-size: 28px;
                     line-height: 35px;
-                    color: #767E86;
+                    color: $grey_color;
                 }
 
                 .offer__stars {
@@ -232,7 +247,7 @@ body {
                 font-family: Rubik;
                 font-size: 16px;
                 line-height: 20px;
-                color: #172432;
+                color: $black_color;
             }
 
             .offer__order {
@@ -247,29 +262,70 @@ body {
                     font-family: Rubik;
                     font-size: 18px;
                     line-height: 21px;
-                    color: #767E86;
+                    color: $grey_color;
 
                     span {
                         font-size: 32px;
                         line-height: 38px;
-                        color: #FF7757;
+                        color: $red_color;
                         word-spacing: 0px;
                     }
                 }
 
                 .offer__btn-details {
                     font-family: Rubik;
-                    color: #fff;
+                    color: $white_color;
                     text-transform: uppercase;
                     font-size: 20px;
                     line-height: 24px;
                     padding: 16px 24px;
-                    background-color: #FF7654;
+                    background-color: $red_color;
                     border-radius: 12px;
                     width: 130px;
                 }
             }
         }
     }
-    
+}
+
+.blog {
+    gap: 100px;
+
+    .blog__content {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .blog__article {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            .blog__title {
+                font-size: 40px;
+                line-height: 53px;
+                color: $black_color;
+            }
+
+            .blog__text {
+                font-family: Rubik;
+                font-size: 18px;
+                line-height: 42px;
+                color: $black_color;
+            }
+
+            .blog__link {
+                color: $red_color;
+                font-family: Rubik;
+                font-size: 24px;
+                line-height: 52px;
+                display: flex;
+                gap: 20px;
+
+                &::after {
+                    content: url(../img/icons/arrow_red.svg);
+                }
+            }
+        }
+    }
 }
