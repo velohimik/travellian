@@ -70,8 +70,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
+  width: 320px;
   margin: 0px auto;
   font-family: "Playfair Display";
+  color: #172432;
 }
 
 .hero {
@@ -168,23 +170,27 @@ body {
 .section .section__header {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 52px;
 }
 .section .section__header .section__title {
-  display: inline-flex;
+  flex-grow: 0;
+  align-self: flex-start;
   font-size: 40px;
   line-height: 53px;
   color: #172432;
   position: relative;
-  padding-bottom: 20px;
 }
-.section .section__header .section__title::after {
+.section .section__header .section__title span {
+  display: inline-block;
+  position: relative;
+}
+.section .section__header .section__title span::after {
   content: "";
-  height: 2px;
+  height: 3px;
   width: 100%;
   background-color: #FF7757;
   position: absolute;
-  bottom: 0;
+  bottom: -20px;
   left: 0;
 }
 .section .section__header .section__description {
@@ -210,6 +216,16 @@ body {
 }
 .section .section__arrows .section__right-arrow {
   background-color: #FF7757;
+}
+.section .section__stars {
+  grid-area: stars;
+  align-self: self-start;
+  display: flex;
+  justify-content: start;
+  gap: 4px;
+}
+.section .section__stars img {
+  margin: 2px;
 }
 
 .destinations {
@@ -271,11 +287,6 @@ body {
   font-size: 28px;
   line-height: 35px;
   color: #767E86;
-}
-.offer .offer__content .offer__info .offer__place .offer__stars {
-  display: flex;
-  justify-content: start;
-  gap: 4px;
 }
 .offer .offer__content .offer__info .offer__description {
   font-family: Rubik;
@@ -349,4 +360,83 @@ body {
 }
 .blog .blog__content .blog__article .blog__link::after {
   content: url(../img/icons/arrow_red.svg);
+}
+
+.planner {
+  gap: 80px;
+}
+.planner .planner__all {
+  font-family: Rubik;
+  color: #FFF;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 20px;
+  background-color: #FF7757;
+  border-radius: 12px;
+  width: 186px;
+  position: relative;
+  left: 14px;
+}
+.planner .planner__all::before, .planner .planner__all::after {
+  content: "";
+  display: block;
+  height: 43px;
+  width: 43px;
+  position: absolute;
+  z-index: -1;
+}
+.planner .planner__all::before {
+  background-color: #172432;
+  top: -14px;
+  left: -14px;
+}
+.planner .planner__all::after {
+  background-color: #767E86;
+  bottom: -14px;
+  right: -14px;
+}
+.planner .planner__content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.planner .planner__content .planner__card {
+  display: grid;
+  max-width: 288px;
+  grid-template-columns: 136px 1fr;
+  grid-template-rows: 320px 41px 61px 44px;
+  grid-template-areas: "image image" "tour price" "title title" "stars duration";
+}
+.planner .planner__content .planner__image {
+  grid-area: image;
+}
+.planner .planner__content .planner__title {
+  grid-area: title;
+  font-size: 28px;
+  line-height: 37px;
+  font-weight: 600;
+  align-self: center;
+}
+.planner .planner__content .planner__tour {
+  grid-area: tour;
+  font-family: Rubik;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 21px;
+  align-self: self-end;
+}
+.planner .planner__content .planner__price {
+  grid-area: price;
+  font-family: Rubik;
+  font-size: 18px;
+  line-height: 21px;
+  align-self: self-end;
+  justify-self: end;
+}
+.planner .planner__content .planner__duration {
+  grid-area: duration;
+  font-family: Rubik;
+  font-size: 18px;
+  line-height: 21px;
+  justify-self: end;
 }

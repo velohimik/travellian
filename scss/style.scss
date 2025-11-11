@@ -4,11 +4,13 @@ $white_color: #FFF;
 $black_color: #172432;
 $red_color: #FF7757;
 $grey_color: #767E86;
+$all_planner_btn_offset: 14px;
 
 body {
-    // max-width: 320px;
+    width: 320px;
     margin: 0px auto;
     font-family: "Playfair Display";
+    color: $black_color;
 }
 
 .hero {
@@ -119,24 +121,29 @@ body {
     .section__header {
         display: flex;
         flex-direction: column;
-        gap: 32px;
+        gap: 52px;
 
         .section__title {
-            display: inline-flex;
+            flex-grow: 0;
+            align-self: flex-start;
             font-size: 40px;
             line-height: 53px;
             color: $black_color;
             position: relative;
-            padding-bottom: 20px;
 
-            &::after {
-                content: "";
-                height: 2px;
-                width: 100%;
-                background-color: $red_color;
-                position: absolute;
-                bottom: 0;
-                left: 0;
+            span {
+                display: inline-block;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    height: 3px;
+                    width: 100%;
+                    background-color: $red_color;
+                    position: absolute;
+                    bottom: -20px;
+                    left: 0;
+                }
             }
         }
 
@@ -167,6 +174,18 @@ body {
 
         .section__right-arrow {
             background-color: $red_color;
+        }
+    }
+
+    .section__stars {
+        grid-area: stars;
+        align-self: self-start;
+        display: flex;
+        justify-content: start;
+        gap: 4px;
+
+        img {
+            margin: 2px;
         }
     }
 }
@@ -234,12 +253,6 @@ body {
                     font-size: 28px;
                     line-height: 35px;
                     color: $grey_color;
-                }
-
-                .offer__stars {
-                    display: flex;
-                    justify-content: start;
-                    gap: 4px;
                 }
             }
 
@@ -326,6 +339,101 @@ body {
                     content: url(../img/icons/arrow_red.svg);
                 }
             }
+        }
+    }
+}
+
+.planner {
+    gap: 80px;
+
+    .planner__all {
+        font-family: Rubik;
+        color: $white_color;
+        font-size: 18px;
+        line-height: 21px;
+        padding: 20px;
+        background-color: $red_color;
+        border-radius: 12px;
+        width: 186px;
+        position: relative;
+        left: $all_planner_btn_offset;
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            height: 43px;
+            width: 43px;
+            position: absolute;
+            z-index: -1;
+        }
+
+        &::before {
+            background-color: $black_color;
+            top: $all_planner_btn_offset * -1;
+            left: $all_planner_btn_offset * -1;
+        }
+
+        &::after {
+            background-color: $grey_color;
+            bottom: $all_planner_btn_offset * -1;
+            right: $all_planner_btn_offset * -1;
+        }
+    }
+
+    .planner__content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .planner__card {
+            display: grid;
+            max-width: 288px;
+            grid-template-columns: 136px 1fr;
+            grid-template-rows: 320px 41px 61px 44px;
+            grid-template-areas:
+                "image image"
+                "tour price"
+                "title title"
+                "stars duration";
+        }
+
+        .planner__image {
+            grid-area: image;
+        }
+
+        .planner__title {
+            grid-area: title;
+            font-size: 28px;
+            line-height: 37px;
+            font-weight: 600;
+            align-self: center;
+        }
+
+        .planner__tour {
+            grid-area: tour;
+            font-family: Rubik;
+            text-transform: uppercase;
+            font-size: 18px;
+            line-height: 21px;
+            align-self: self-end;
+        }
+
+        .planner__price {
+            grid-area: price;
+            font-family: Rubik;
+            font-size: 18px;
+            line-height: 21px;
+            align-self: self-end;
+            justify-self: end;
+        }
+
+        .planner__duration {
+            grid-area: duration;
+            font-family: Rubik;
+            font-size: 18px;
+            line-height: 21px;
+            justify-self: end;
         }
     }
 }
