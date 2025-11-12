@@ -4,6 +4,7 @@ $white_color: #FFF;
 $black_color: #172432;
 $red_color: #FF7757;
 $grey_color: #767E86;
+$white_smoke_color: #F5F6F7;
 $all_planner_btn_offset: 14px;
 
 body {
@@ -434,6 +435,63 @@ body {
             font-size: 18px;
             line-height: 21px;
             justify-self: end;
+        }
+    }
+}
+
+.gallery {
+    gap: 100px;
+
+    .gallery__content {
+        display: grid;
+        gap: 32px;
+    }
+}
+
+.experience {
+    gap: 100px;
+
+    .experience__content {
+        background-color: $white_smoke_color;
+        padding: 60px 20px 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: relative;
+
+        .experience__text {
+            font-family: Rubik;
+            font-size: 18px;
+            line-height: 23px;
+            color: $grey_color;
+        }
+
+        .experience__author {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            color: $grey_color;
+
+            .experience__author-name {
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            .experience__author-role {
+                font-family: Rubik;
+                font-size: 18px;
+                line-height: 21px;
+            }
+        }
+
+        &::before {
+            content: url(../img/photo/avatar_1_mobile.png);
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            top: -65px;
+            left: 20px;
         }
     }
 }

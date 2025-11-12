@@ -440,3 +440,53 @@ body {
   line-height: 21px;
   justify-self: end;
 }
+
+.gallery {
+  gap: 100px;
+}
+.gallery .gallery__content {
+  display: grid;
+  gap: 32px;
+}
+
+.experience {
+  gap: 100px;
+}
+.experience .experience__content {
+  background-color: #F5F6F7;
+  padding: 60px 20px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+.experience .experience__content .experience__text {
+  font-family: Rubik;
+  font-size: 18px;
+  line-height: 23px;
+  color: #767E86;
+}
+.experience .experience__content .experience__author {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #767E86;
+}
+.experience .experience__content .experience__author .experience__author-name {
+  font-size: 24px;
+  line-height: 32px;
+}
+.experience .experience__content .experience__author .experience__author-role {
+  font-family: Rubik;
+  font-size: 18px;
+  line-height: 21px;
+}
+.experience .experience__content::before {
+  content: url(../img/photo/avatar_1_mobile.png);
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: -65px;
+  left: 20px;
+}
