@@ -455,6 +455,7 @@ body {
 .experience .experience__content {
   background-color: #F5F6F7;
   padding: 60px 20px 32px;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -489,4 +490,58 @@ body {
   position: absolute;
   top: -65px;
   left: 20px;
+}
+
+.subscription {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding: 40px 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.subscription .subscription__title {
+  font-size: 40px;
+  line-height: 53px;
+  color: #767E86;
+}
+.subscription form {
+  display: flex;
+  flex-direction: column;
+}
+.subscription form label {
+  font-family: Rubik;
+  color: #767E86;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+.subscription form #email {
+  color: #FF7757;
+  background-color: #FFE8D4;
+  opacity: 0.8;
+  padding: 24px auto;
+  border-radius: 12px;
+  height: 72px;
+  text-align: center;
+  font-family: Rubik;
+  font-size: 20px;
+  line-height: 24px;
+  margin-bottom: 32px;
+}
+.subscription form .subscription__button {
+  background-color: #FF7757;
+  color: #FFF;
+  font-family: Rubik;
+  font-size: 20px;
+  line-height: 24px;
+  border-radius: 12px;
+  padding: 16px 40px;
+  height: 73px;
+}
+
+.footer {
+  padding: 80px 16px;
+  background-color: #172432;
+  color: #fff;
 }

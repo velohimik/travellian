@@ -5,6 +5,8 @@ $black_color: #172432;
 $red_color: #FF7757;
 $grey_color: #767E86;
 $white_smoke_color: #F5F6F7;
+$warm_color: #FF7757;
+$light_orange_color: #FFE8D4;
 $all_planner_btn_offset: 14px;
 
 body {
@@ -454,6 +456,7 @@ body {
     .experience__content {
         background-color: $white_smoke_color;
         padding: 60px 20px 32px;
+        border-radius: 12px;
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -494,4 +497,64 @@ body {
             left: 20px;
         }
     }
+}
+
+.subscription {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 0.2);
+
+    .subscription__title {
+        font-size: 40px;
+        line-height: 53px;
+        color: $grey_color;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-family: Rubik;
+            color: $grey_color;
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 16px;
+            
+        }
+
+        #email {
+            color: $warm_color;
+            background-color: $light_orange_color;
+            opacity: 0.8;
+            padding: 24px auto;
+            border-radius: 12px;
+            height: 72px;
+            text-align: center;
+            font-family: Rubik;
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 32px;
+        }
+
+        .subscription__button {
+            background-color: $red_color;
+            color: #FFF;
+            font-family: Rubik;
+            font-size: 20px;
+            line-height: 24px;
+            border-radius: 12px;
+            padding: 16px 40px;
+            height: 73px;
+        }
+    }
+}
+
+.footer {
+    padding: 80px 16px;
+    background-color: $black_color;
+    color: #fff;
 }
