@@ -544,4 +544,62 @@ body {
   padding: 80px 16px;
   background-color: #172432;
   color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.footer .footer__logo {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  grid-template-areas: "logo name" "copy copy";
+  row-gap: 16px;
+  -moz-column-gap: 7px;
+       column-gap: 7px;
+  justify-items: start;
+  align-items: center;
+}
+.footer .footer__logo .footer__icon {
+  grid-area: logo;
+}
+.footer .footer__logo .footer__name {
+  grid-area: name;
+}
+.footer .footer__logo .footer__copyright {
+  grid-area: copy;
+  font-family: Rubik;
+  font-size: 14px;
+  line-height: 17px;
+}
+.footer .footer__section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer .footer__section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer .footer__section .footer__link {
+  font-family: Rubik;
+  color: #fff;
+  font-size: 18px;
+  line-height: 21px;
+}
+.footer .footer__title {
+  font-family: Rubik;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+}
+.footer .follow {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer .follow .footer__media {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 32px;
+  gap: 24px;
 }
